@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300|Raleway:100,200,300,400|Montserrat:100,200,300');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/***********************/
+#root {
+  background: linear-gradient(25deg, #4d90af 0%, #7ccfc4 100%);
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Raleway', Trebuchet MS, sans-serif;
+  font-weight: 200;
+  overflow: hidden;
+}
+
+.app-container {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 18vh 26vh 40vh 16vh; /* = 100vh */
+  /* border: 1px solid red; */
+}
+
+.button {
+  width: 20vw;
+  height: 10vh;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 3rem;
+  border-radius: 5px;
+  color: #000;
+}
+
+/************ Landing-Page Quadrants ************/
+
+.first-quadrant-container {
+  grid-row: 1/2;
+  grid-column: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.second-quadrant-container {
+  grid-row: 2/3;
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: repeat(2, 13vh);
+  text-align: center;
+  font-family: 'Montserrat', 'Trebuchet MS', sans-serif;
+  font-weight: 100;
+}
+
+.third-quadrant-container {
+  grid-row: 3/4;
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: repeat(4, 10vh);
+  text-align: center;
+  font-family: 'Montserrat', 'Trebuchet MS', sans-serif;
+  font-weight: 100;
+  position: relative; /* for bi-weekly btn positioning */
+}
+
+.fourth-quadrant-container {
+  grid-row: 4/5;
+  grid-column: 1;
+  font-size: 3rem;
+  position: relative;
+}
+
+/************ Landing-Page Quadrants END ************/
+
+.app-title {
+  font-family: 'Roboto', Times, serif;
+  color: rgba(45, 59, 46, 0.7);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  font-size: 4rem;
+  margin: 2vh auto 0vh;
+  line-height: 2.8rem;
+  letter-spacing: 0.5rem;
+}
+
+.deposit-display {
+  height: 8vh;
+  width: 100vw;
+}
+
+.deposit-display h2 {
+  font-family: 'Montserrat', 'Trebuchet MS', sans-serif;
+  font-weight: 200;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+  color: rgb(83, 83, 83);
+}
+
+/************* second-quadrant-container ****************/
+
+.bills-UI-container {
+  grid-column: 1/3;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 2vw 40vw 50vw 2vw;
+  grid-template-rows: 1fr;
+  height: 100%;
+}
+
+.bills-btn {
+  grid-column: 2/4;
+  grid-row: 1;
+  margin: auto;
+  background: #fff;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  height: 10vh;
+  width: 95vw;
+  font-weight: bold;
+  font-size: 4rem;
+  border-radius: 30px;
+  text-align: left;
+  border: 2px solid #d66800;
+}
+
+.bills-btn > span { /* bills total*/
+  position: absolute;
+  right: 2vw;
+  top: 1.5vh;
+}
+
+.item-name {
+  font-size: 3rem;
+  margin-left: 4vw;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.bills-btn .item-name {
+  color: #d66800;
+}
+
+#bills-total-display {
+  /*span (bill amt) */
+  font-size: 4rem;
+  margin: auto;
+  margin-right: 10vw;
+  z-index: 2;
+  font-size: 4rem;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+#amount-enter-icon-bill {
+  color: #d66800;
+}
+/*************SPENDING ******************/
+
+.spend-UI-container {
+  grid-column: 1/3;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 2vw 40vw 50vw 2vw;
+  grid-template-rows: 1fr;
+  height: 100%;
+}
+
+.spending-btn {
+  grid-column: 2/4;
+  grid-row: 1;
+  margin: auto;
+  background: #fff;
+  box-shadow: 2px 2px 5px 2px #0d0b6d;
+  position: relative;
+  height: 10vh;
+  width: 95vw;
+  font-weight: bold;
+  font-size: 4rem;
+  border-radius: 30px;
+  text-align: left;
+  border: 2px solid #0d0b6d;
+}
+
+.spending-btn > span { /*spending total*/
+  position: absolute;
+  right: 2vw;
+  top: 1.5vh;
+}
+
+.spending-btn .item-name {
+  color: #0d0b6d;
+}
+
+#spend-total-display {
+  font-size: 4rem;
+  margin: auto;
+  margin-right: 10vw;
+  z-index: 2;
+  font-size: 4rem;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300;
+}
+
+#amount-enter-icon-spend {
+  color: #0d0b6d;
+}
+
+#number-display {
+  font-weight: bold;
+}
+
+/************* third-quadrant-container (display-fields)**********/
+
+#biWeekly-toggle-btn {
+  width: 20vh;
+  height: 10vw;
+  transform: rotate(-90deg) translate(-50%, 0);
+  transform-origin: center;
+  font-family: 'Roboto', 'Trebuchet MS', sans-serif;
+  font-weight: 200;
+  font-size: 2rem;
+  border-radius: 30px;
+  color: black;
+  position: absolute;
+  top: 8vh;
+  right: -11vw;
+  background: #fff;
+  box-shadow: -2px 2px 5px 2px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+#bi-weekly-text {
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+.third-quadrant-container .display {
+  width: 94vw;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+  margin-left: 3vw;
+  font-size: 2.3rem;
+  font-weight: 100;
+
+}
+
+.third-quadrant-container .display > span {
+  position: absolute;
+  font-weight: 100;
+  right: 12vw;
+}
+
+.result-display {
+  font-weight: 100;
+}
+
+
+.decrementer-btn-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 16vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.monthly-btn {
+  width: 20vw;
+  height: 16vh;
+  font-weight: 300;
+  font-size: 6rem;
+  border-radius: 5px;
+  color: #c4c4c4;
+  background: transparent;
+  border: 1px solid transparent;
+  text-shadow: 2px 2px 3px #313131;
+}
+
+#monthly-btn-lt {
+}
+
+#monthly-btn-rt {
+}
+.grand-total-display {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+.grand-total-display > span {
+  color: white;
+  font-size: 5rem;
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+.test-Q {
+  border: 1px solid #fff;
+  border-width: 0;
+  border-bottom-width: 1px;
+}
+
+
+/***************************************************************************/
+/******************************MODAL STYLES START***************************/
+/***************************************************************************/
+
+::-webkit-input-placeholder {
+  text-align: center;
+  font-family: 'Raleway', Trebuchet MS, sans-serif;
+  font-weight: 300;
+  font-size: 90%;
+  line-height: 3rem;
+  font-style: italic;
+  color: #efefef;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+  font-family: 'Raleway', Trebuchet MS, sans-serif;
+  font-weight: 300;
+  font-size: 90%;
+  line-height: 3rem;
+
+  font-style: italic;
+  color: #efefef;
+}
+
+.ReactModalPortal > div {
+  opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+  transition: opacity 200ms ease-in-out;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+  position: relative;
+  z-index: 10;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.modal__button--close {
+  margin-bottom: 0;
+}
+
+
+.modal {
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+  padding: 1%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 12vh 35vh 8vh;
+  background: #eee;
+}
+.modal-third-top {
+  grid-column: 1/-1;
+  grid-row: 1;
+  text-align: center;
+  border-bottom: 1px dotted black;
+  position: relative;
+}
+.modal-third-top > form input {
+  width: 39vw;
+  height: 5vh;
+  position: absolute;
+  bottom: 0.5vh;
+  border-color: transparent;
+  border-bottom: 1px solid blue;
+}
+.spending-modal{
+  /* background: #0d0b6d; */
+  background: linear-gradient(55deg, #2d2bb3 0%, #9b9bb9 50%);
+}
+.bills-modal {
+  background: linear-gradient(55deg, #db6520 0%, #cab6a4 70%);
+}
+
+.modal-third-top > form input::-webkit-input-placeholder {
+  color: #fff;
+  letter-spacing: .1rem;
+}
+
+.modal-third-top > form button {
+  width: 15vw;
+  height: 5vh;
+  position: absolute;
+  bottom: -0.5vh;
+  right: 1vw;
+}
+
+#modal__form--bill-name-input {
+  left: 1vw;
+}
+
+#modal__form--bill-amount-input {
+  right: 18vw;
+}
+
+#modal__form--spend-name-input {
+  left: 1vw;
+}
+
+#modal__form--spend-amount-input {
+  right: 18vw;
+}
+
+
+.modal__btn.modal__btn--submit {
+  font-size: 4rem;
+  line-height: 2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+#add-bill-btn{
+
+}
+
+#add-spend-item-btn {
+  background: #1412af;
+}
+
+.modal__form {
+  height: 5.5vh;
+  width: 100%;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.modal__form > input, textarea {
+  background: transparent;
+}
+
+.modal-third-middle {
+  grid-column: 1/-1;
+  grid-row: 2;
+  background: #fff;
+  font-size: 3rem;
+  font-family: 'Roboto', sans-serif;
+  padding: 5%;
+  border-radius: 2.4rem;
+  border: 2px solid #d66800;
+}
+
+.modal__form--add-bill input {
+  font-size: 3rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.modal__form--add-spend input {
+  font-size: 3rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.modal-third-bottom {
+  grid-column: 1/-1;
+  grid-row: 3;
+  /* background: pink; */
+  text-align: center;
+}
+.modal-third-bottom h4 {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  letter-spacing: .2rem;
+}
+
+.modal__btn--done {
+  width: 100%;
+  border-radius: 2.4rem;
+  height: 8vh;
+  background: #fff;
+  border: 2px solid #d66800;
+  font-size: 2rem;
+
+}
+
+.modal__title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.4rem;
+  font-weight: 200;
+  color: #000;
+}
+
+.modal__btn {
+  width: 50px;
+  height: 30px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: 100;
+  background: #d66800;
+  top: 6.5vh;
+}
+
+modal__form--add-bill .modal__body {
+}
+
+/***************MODAL STYLES END************/

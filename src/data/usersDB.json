@@ -1,0 +1,26 @@
+{
+  "user1": {
+    "user_id": "usr_001",
+    "currentBalance": "2,000",
+    "billPayTasks": [{
+      "bill_id": "101",
+      "bill_Name": "acme",
+      "bill_Amount": "200.00"
+    },
+    {
+      "bill_id": "102",
+      "bill_Name": "CVS",
+      "bill_Amount": "150.00"
+    }],
+    "expenses": [{
+      "expense_id": "101",
+      "expense_Name": "acme",
+      "expense_Amount": "200.00"
+    },
+    {
+      "expense_id": "102",
+      "expense_Name": "CVS",
+      "expense_Amount": "150.00"
+    }]
+  }
+}
