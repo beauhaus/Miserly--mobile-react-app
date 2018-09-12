@@ -1,5 +1,4 @@
 const path = require('path');
-// /Users/beau/Desktop/TTS Money2/barebones-animated-route-transitions
 
 console.log(path.join(__dirname, 'public'));
 

@@ -172,7 +172,7 @@ class Main extends Component {
     return (
       <div className="app-container">
         <div className="first-quadrant-container">
-          <h1 className="app-title">tts money</h1>
+          <h1 className="app-title">Mobile $aver</h1>
           <DepositDisplay depositVal={this.state.deposit} />
         </div>
         <div className="second-quadrant-container">
